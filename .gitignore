@@ -1,0 +1,7 @@
+# P0002 ShardLens — 不入库的本地生成物
+node_modules/
+dist/
+coverage/
+*.local
+*.tsbuildinfo
+.DS_Store

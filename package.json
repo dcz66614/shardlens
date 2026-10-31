@@ -1,0 +1,41 @@
+{
+  "name": "shardlens",
+  "private": true,
+  "version": "1.0.0",
+  "description": "碎码镜 ShardLens — Byte-Level Erasure Recovery Studio (P0002, SPEC_VERSION 1.0.0)",
+  "type": "module",
+  "engines": {
+    "node": ">=24.0.0"
+  },
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc --noEmit",
+    "preview": "vite preview",
+    "test": "vitest run",
+    "test:gf": "vitest run tests/gf256.spec.ts",
+    "test:matrix": "vitest run tests/rs_matrix.spec.ts",
+    "test:core": "vitest run tests/encode.spec.ts tests/decode.spec.ts",
+    "test:proof": "vitest run tests/evidence.spec.ts",
+    "test:exhaustive": "vitest run tests/exhaustive.spec.ts",
+    "test:io": "vitest run tests/experiment_io.spec.ts",
+    "test:ui": "vitest run tests/ui-shards.spec.tsx tests/ui-matrix.spec.tsx tests/ui-byte-inspector.spec.tsx tests/ui-session.spec.tsx",
+    "bench": "tsx scripts/benchmark.ts"
+  },
+  "dependencies": {
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1"
+  },
+  "devDependencies": {
+    "@testing-library/react": "^16.3.3",
+    "@testing-library/user-event": "^14.6.8",
+    "@types/react": "^19.3.0",
+    "@types/react-dom": "^19.3.0",
+    "@vitejs/plugin-react": "^6.1.2",
+    "jsdom": "^30.1.3",
+    "tsx": "^4.23.15",
+    "typescript": "~5.9.3",
+    "vite": "^8.3.5",
+    "vitest": "^5.0.5"
+  }
+}

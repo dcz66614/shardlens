@@ -1,0 +1,100 @@
+/* P0002 ShardLens — T002 空壳样式。
+   视觉基调取自 PROJECT_BOOK §10.1（深色实验室风）；
+   仅覆盖骨架所需，完整三列工作台样式由后续 UI 任务交付。 */
+
+:root {
+  color-scheme: dark;
+  --bg: #0c1421;
+  --panel: #142238;
+  --text: #e8f0f8;
+  --muted: #9fb0c3;
+  --data-cyan: #42d4b8;
+  --parity-blue: #8ea5ff;
+  --border: #24354f;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family:
+    'Segoe UI', 'PingFang SC', 'Noto Sans CJK SC', 'Microsoft YaHei', system-ui,
+    sans-serif;
+  line-height: 1.6;
+}
+
+.shell {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.9rem 1.5rem;
+  background: var(--panel);
+  border-bottom: 1px solid var(--border);
+}
+
+.logo-mark {
+  color: var(--data-cyan);
+  font-size: 1.4rem;
+  letter-spacing: 0.1rem;
+}
+
+.logo {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+}
+
+.version-badge {
+  margin-left: auto;
+  padding: 0.1rem 0.6rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--muted);
+  font-size: 0.85rem;
+}
+
+.placeholder {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 0.6rem;
+  padding: 3rem 1.5rem;
+  text-align: center;
+}
+
+.headline {
+  margin: 0;
+  font-size: 1.3rem;
+  color: var(--data-cyan);
+}
+
+.motto {
+  margin: 0;
+  color: var(--parity-blue);
+  letter-spacing: 0.06em;
+}
+
+.note {
+  margin: 1rem auto 0;
+  max-width: 46rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
